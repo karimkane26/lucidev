@@ -75,7 +75,7 @@ export const Footer = () => {
             <img src="/images/logo.svg" width={40} height={40} alt="Logo" />
           </a>
           <p className="text-zinc-400 dark:text-zinc-500 text-sm reveal-up">
-            &copy; 2025 <span className="text-zinc-600 dark:text-zinc-300">codewithkarim</span>
+            &copy; 2026 <span className="text-zinc-600 dark:text-zinc-300">lucidev</span>
           </p>
         </div>
       </div>
