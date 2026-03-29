@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-import React from 'react';
 import { ProjectCard } from './ProjectCard';
 
 const works = [
@@ -20,6 +18,24 @@ const works = [
     title: 'Budget app',
     tags: ['Development', 'JS'],
     projectLink: 'https://zingy-unicorn-2d95c9.netlify.app/',
+  },
+  {
+    imgSrc: '/images/apisenegal.jpg',
+    title: 'API Sénégal – Apiculture',
+    tags: ['WordPress', 'E-commerce', 'Sénégal'],
+    projectLink: 'https://apisenegal.sn/',
+  },
+  {
+    imgSrc: '/images/daroukhadim.jpg',
+    title: 'Darou Khadim Trading – BTP',
+    tags: ['BTP', 'Services', 'Web'],
+    projectLink: 'https://daroukhadimtrading.com/',
+  },
+  {
+    imgSrc: '/images/globalprime.jpg',
+    title: 'Global Prime Partner – Sécurité',
+    tags: ['Sécurité', 'Corporate', 'France'],
+    projectLink: 'https://globalprimepartner.fr/',
   },
 ];
 

@@ -112,6 +112,9 @@ const cvData = {
       { name: 'Société d\'actuariat', tech: 'React', link: 'https://actuarial-consulting.sn/' },
       { name: 'Club Informatique Guédiawaye', tech: 'Web', link: 'https://clubinformatiquedeguediawaye.com' },
       { name: 'Plateforme Gestion de stock', tech: 'React.js', link: null },
+      { name: 'API Sénégal', tech: 'WordPress', link: 'https://apisenegal.sn/' },
+      { name: 'Darou Khadim Trading', tech: 'E-commerce', link: 'https://daroukhadimtrading.com/' },
+      { name: 'Global Prime Partner', tech: 'Web', link: 'https://globalprimepartner.fr/' },
     ],
   },
 
@@ -215,6 +218,9 @@ const cvData = {
       { name: 'Actuarial Company Site', tech: 'React', link: 'https://actuarial-consulting.sn/' },
       { name: 'Guédiawaye IT Club', tech: 'Web', link: 'https://clubinformatiquedeguediawaye.com' },
       { name: 'Stock Management Platform', tech: 'React.js', link: null },
+      { name: 'API Sénégal', tech: 'WordPress', link: 'https://apisenegal.sn/' },
+      { name: 'Darou Khadim Trading', tech: 'E-commerce', link: 'https://daroukhadimtrading.com/' },
+      { name: 'Global Prime Partner', tech: 'Web', link: 'https://globalprimepartner.fr/' },
     ],
   },
 };

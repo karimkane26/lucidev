@@ -4,7 +4,10 @@
       "Bash(npm run:*)",
       "Bash(npx vite:*)",
       "Bash(ls \"c:\\\\Users\\\\DELL\\\\Desktop\\\\portfolio\\\\node_modules\\\\.bin\"\" | grep -i vite 2>&1 || echo \"not found \")",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "WebFetch(domain:apisenegal.sn)",
+      "WebFetch(domain:daroukhadimtrading.com)",
+      "WebFetch(domain:globalprimepartner.fr)"
     ]
   }
 }
