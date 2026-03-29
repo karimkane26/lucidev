@@ -2,119 +2,83 @@
 import { ButtonPrimary } from "./Button";
 
 const sitemap = [
-    {
-      label: 'Home',
-      href: '#home'
-    },
-    {
-      label: 'About',
-      href: '#about'
-    },
-    {
-      label: 'Work',
-      href: '#work'
-    },
-    {
-      label: 'Reviews',
-      href: '#reviews'
-    },
-    {
-      label: 'Contact me',
-      href: '#contact'
-    }
-  ];
-  
-  const socials = [
-    {
-      label: 'GitHub',
-      href: 'https://github.com/karimkane26'
-    },
-    {
-      label: 'LinkedIn',
-      href: 'https://www.linkedin.com/authwall?trk=gf&trkInfo=AQHArfjgV9D38AAAAZQsrA6IQDjUdd70CS3qjQUnLL4X8QVf8eJ_G_cN7UPZIeIN9mnpdg-xJUP5-7RijBaHKEgtnxZZFNqm6kAxhyBWV9XtFqcmdVOvJGkEUoHtUPAJL6WxzXA=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fabdoul-karim-kane-516396209'
-    },
-    {
-      label: 'Twitter X',
-      href: 'https://www.linkedin.com/authwall?trk=gf&trkInfo=AQHArfjgV9D38AAAAZQsrA6IQDjUdd70CS3qjQUnLL4X8QVf8eJ_G_cN7UPZIeIN9mnpdg-xJUP5-7RijBaHKEgtnxZZFNqm6kAxhyBWV9XtFqcmdVOvJGkEUoHtUPAJL6WxzXA=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fabdoul-karim-kane-516396209'
-    },
-    {
-      label: 'Instagram',
-      href: 'https://www.instagram.com/codewithsadee'
-    },
-    {
-      label: 'CodePen',
-      href: 'https://codepen.io/Abdoul-karim-Kane'
-    }
-  ];
+  { label: 'Home', href: '#home' },
+  { label: 'About', href: '#about' },
+  { label: 'Work', href: '#work' },
+  { label: 'CV', href: '#cv' },
+  { label: 'Contact me', href: '#contact' }
+];
+
+const socials = [
+  { label: 'GitHub', href: 'https://github.com/karimkane26' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/abdoul-karim-kane-516396209' },
+  { label: 'Twitter X', href: 'https://x.com/Abdoulk82109408?t=vu1EjUa2ddD6yMzjYfjJFw&s=08' },
+  { label: 'CodePen', href: 'https://codepen.io/Abdoul-karim-Kane' }
+];
+
 export const Footer = () => {
   return (
     <footer className="section">
-        <div className="container">
-            <div className="lg:grid lg:grid-cols-2">
-                <div className="mb-10">
-                <h2 className="headline-1 mb-8 lg:max-w-[12ch] reveal-up">
-            Let&apos;s work together today!
-
-            <ButtonPrimary 
-            href="mailto:lucidev97@gmail.com"
-            label="Start project"
-            icon="chevron_right"
-            className="reveal-up"
-            />
+      <div className="container">
+        <div className="lg:grid lg:grid-cols-2">
+          <div className="mb-10">
+            <h2 className="headline-1 mb-8 lg:max-w-[12ch] reveal-up">
+              Let&apos;s work together today!
             </h2>
-                </div >
+            <ButtonPrimary
+              href="mailto:lucidev97@gmail.com"
+              label="Start project"
+              icon="chevron_right"
+              classes="reveal-up"
+            />
+          </div>
 
-                <div className="grid grid-cols-2 gap-4 lg:pl-20">
-                    <div>
-                        <p className="reveal-up">Sitemap</p>
-                        <ul>
-                            {sitemap.map(({label,href},key) =>(
-                                <li key={key}>
-                                    <a href={href} 
-                                    className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up"
-                                    >
-                                        {label}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                <div className="mb-2 reveal-up">
-                    <div>
-                        <p className="">Socials</p>
-                        <ul>
-                            {socials.map(({label,href},key) =>(
-                                <li key={key}>
-                                    <a href={href} 
-                                    target="_blank"
-                                    className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up"
-                                    >
-                                        {label}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
+          <div className="grid grid-cols-2 gap-4 lg:pl-20">
+            <div>
+              <p className="font-medium text-zinc-700 dark:text-zinc-300 mb-2 reveal-up">Sitemap</p>
+              <ul>
+                {sitemap.map(({ label, href }, key) => (
+                  <li key={key}>
+                    <a
+                      href={href}
+                      className="block text-sm text-zinc-500 dark:text-zinc-400 py-1 transition-colors hover:text-zinc-900 dark:hover:text-zinc-200 reveal-up"
+                    >
+                      {label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <div className="flex items-center justify-between p-10 mb-8">
-                <a href="/" className="logo reveal-up">
-                    <img 
-                    src="/images/logo.svg"
-                    width={40}
-                    height={40}
-                     alt="Logo"
-                      />
-                </a>
-                <p className=" text-zinc-500 text-sm reveal-up">
-                &copy; 2024 <span className="text-zinc-200">codewithkarim</span>
-                </p>
+            <div className="mb-2 reveal-up">
+              <p className="font-medium text-zinc-700 dark:text-zinc-300 mb-2">Socials</p>
+              <ul>
+                {socials.map(({ label, href }, key) => (
+                  <li key={key}>
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="block text-sm text-zinc-500 dark:text-zinc-400 py-1 transition-colors hover:text-zinc-900 dark:hover:text-zinc-200"
+                    >
+                      {label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
+          </div>
         </div>
+
+        <div className="flex items-center justify-between pt-10 pb-8 border-t border-zinc-900/10 dark:border-zinc-50/10 mt-8">
+          <a href="/" className="logo reveal-up">
+            <img src="/images/logo.svg" width={40} height={40} alt="Logo" />
+          </a>
+          <p className="text-zinc-400 dark:text-zinc-500 text-sm reveal-up">
+            &copy; 2025 <span className="text-zinc-600 dark:text-zinc-300">codewithkarim</span>
+          </p>
+        </div>
+      </div>
     </footer>
-  )
-}
+  );
+};

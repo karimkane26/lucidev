@@ -1,10 +1,39 @@
+import { useEffect, useRef } from "react";
 import { ButtonPrimary, ButtonOutline } from "./Button";
+import gsap from "gsap";
 
 export const Hero = () => {
+  const avatarRef = useRef(null);
+
+  useEffect(() => {
+    // Floating animation for hero avatar
+    gsap.to(avatarRef.current, {
+      y: -14,
+      duration: 2.5,
+      ease: "sine.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+
+    // Hero entrance animation
+    gsap.fromTo(
+      ".hero-content > *",
+      { y: 30, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: "power2.out",
+        delay: 0.2,
+      }
+    );
+  }, []);
+
   return (
     <section id="home" className="pt-28 lg:pt-36">
       <div className="container items-center lg:grid lg:grid-cols-2 lg:gap-10">
-        <div>
+        <div className="hero-content">
           <div className="flex items-center gap-3">
             <figure className="img-box w-9 h-9 rounded-lg">
               <img
@@ -15,7 +44,7 @@ export const Hero = () => {
                 className="img-cover"
               />
             </figure>
-            <div className="flex items-center gap-1.5 text-zinc-400 text-sm tracking-wide">
+            <div className="flex items-center gap-1.5 text-zinc-500 dark:text-zinc-400 text-sm tracking-wide">
               <span className="relative w-2 h-2 rounded-full bg-emerald-400">
                 <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"></span>
               </span>
@@ -27,14 +56,12 @@ export const Hero = () => {
             Building Scalable Modern Websites for the Future
           </h2>
           <div className="flex items-center gap-3">
-            {/* Bouton pour télécharger le CV */}
             <ButtonPrimary
               href="/cv/MONCV.pdf"
               label="Download CV"
               icon="download"
-              download={true} // Ajouter l'attribut de téléchargement
+              download={true}
             />
-            {/* Bouton pour faire défiler la page */}
             <ButtonOutline
               href="#about"
               label="Scroll down"
@@ -43,7 +70,7 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:block" ref={avatarRef}>
           <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-65% rounded-[60px] overflow-hidden">
             <img
               src="/images/avatar.jpg"
@@ -58,4 +85,3 @@ export const Hero = () => {
     </section>
   );
 };
-
