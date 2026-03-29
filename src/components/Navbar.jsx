@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { useState, useEffect, useRef } from "react";
 
 export const Navbar = ({ navOpen }) => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
   const lastActiveLink = useRef();
   const activeBox = useRef();
 
@@ -50,6 +50,7 @@ export const Navbar = ({ navOpen }) => {
           href={link}
           key={key}
           data-index={key}
+          ref={key === 0 ? lastActiveLink : null}
           className={`${className} ${activeIndex === key ? "active" : ""}`}
           onClick={activeCurrentLink}
         >

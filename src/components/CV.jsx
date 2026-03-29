@@ -358,7 +358,7 @@ export const CV = () => {
 
             {/* Download */}
             <a
-              href="/cv/MONCV.pdf"
+              href="/cv/Abdoul Karim Kane cv.pdf"
               download
               className="btn btn-primary"
             >
