@@ -7,7 +7,15 @@
       "Bash(npm install:*)",
       "WebFetch(domain:apisenegal.sn)",
       "WebFetch(domain:daroukhadimtrading.com)",
-      "WebFetch(domain:globalprimepartner.fr)"
+      "WebFetch(domain:globalprimepartner.fr)",
+      "WebFetch(domain:lassanasiby.com)",
+      "Bash(curl -s https://lassanasiby.com/)",
+      "Bash(curl -s --max-filesize 100000 https://lassanasiby.com/)",
+      "Read(//tmp/**)",
+      "Bash(python3 -c \"import sys; content = sys.stdin.read\\(\\); print\\(content\\)\")"
+    ],
+    "additionalDirectories": [
+      "\\tmp"
     ]
   }
 }

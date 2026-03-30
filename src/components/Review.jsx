@@ -2,7 +2,7 @@ import { ReviewCard } from "./ReviewCard";
 
 const experiences = [
   {
-    content: "Formation d'élèves en Python au lycée Seydina Limamou Laye. Initiation à la logique algorithmique et projets pratiques.",
+    content: "Formation d'élèves en Python au lycée Seydina Limamou Laye. Initiation à la logique algorithmique et réalisation de projets pratiques.",
     name: "FORCE-N",
     company: "Assistant formateur Python — 2024 (6 mois)"
   },
@@ -45,18 +45,23 @@ export const Review = () => {
   return (
     <section id="reviews" className="section overflow-hidden">
       <div className="container">
+        <span className="section-label reveal-up">Parcours</span>
         <h2 className="headline-2 mb-2 reveal-up">Mon Parcours</h2>
-        <p className="text-zinc-500 dark:text-zinc-400 mb-8 reveal-up">My Career Journey</p>
+        <p className="text-zinc-500 dark:text-zinc-400 mb-10 reveal-up">Expériences & Formations</p>
 
-        <h3 className="text-lg font-semibold text-zinc-700 dark:text-zinc-300 mb-4">Expériences Professionnelles</h3>
-        <div className="flex items-stretch gap-3 w-fit overflow-x-auto pb-3">
+        <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-4 reveal-up">
+          Expériences professionnelles
+        </p>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
           {experiences.map(({ content, name, company }, key) => (
             <ReviewCard key={key} name={name} company={company} content={content} />
           ))}
         </div>
 
-        <h3 className="text-lg font-semibold text-zinc-700 dark:text-zinc-300 mt-12 mb-4">Formations &amp; Certifications</h3>
-        <div className="flex items-stretch gap-3 w-fit overflow-x-auto pb-3">
+        <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mt-10 mb-4 reveal-up">
+          Formations &amp; Certifications
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           {formations.map(({ content, name, company }, key) => (
             <ReviewCard key={key} name={name} company={company} content={content} />
           ))}

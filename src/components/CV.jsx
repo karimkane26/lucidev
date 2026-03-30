@@ -331,9 +331,7 @@ export const CV = () => {
         {/* Section header */}
         <div ref={headerRef} className="flex flex-wrap items-end justify-between mb-10 gap-4">
           <div>
-            <p className="text-sky-400 text-xs font-bold uppercase tracking-[0.2em] mb-2">
-              {lang === 'fr' ? 'Mon Profil' : 'My Profile'}
-            </p>
+            <span className="section-label">{lang === 'fr' ? 'Mon Profil' : 'My Profile'}</span>
             <h2 className="headline-2">{data.sectionLabel}</h2>
           </div>
 

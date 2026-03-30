@@ -1,27 +1,21 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-import React from 'react';
 import PropTypes from 'prop-types';
 
 export const SkillCard = ({ imgSrc, label, desc, classes }) => {
   return (
     <div className={
-      'flex items-center gap-3 ring-2 ring-inset ring-zinc-900/10 dark:ring-zinc-50/10 rounded-2xl p-3 ' +
-      'bg-white dark:bg-zinc-800/30 hover:bg-zinc-50 dark:hover:bg-zinc-800 ' +
-      'transition-colors ' +
+      'flex items-center gap-4 bg-white dark:bg-zinc-800/60 ' +
+      'border border-zinc-200/80 dark:border-zinc-700/60 ' +
+      'rounded-2xl p-4 shadow-sm ' +
+      'hover:border-sky-300/60 dark:hover:border-sky-500/30 ' +
+      'transition-all ' +
       (classes || '')
     }>
-      <figure className='bg-zinc-100 dark:bg-zinc-700/50 rounded-lg overflow-hidden w-12 h-12 p-2 transition-colors shrink-0'>
-        <img
-          src={imgSrc}
-          alt={label}
-          width={32}
-          height={32}
-        />
+      <figure className="w-11 h-11 rounded-xl overflow-hidden bg-zinc-50 dark:bg-zinc-700/50 p-2 shrink-0">
+        <img src={imgSrc} alt={label} width={28} height={28} className="w-full h-full object-contain" />
       </figure>
       <div>
-        <h3 className="font-medium text-zinc-900 dark:text-zinc-50">{label}</h3>
-        <p className='text-zinc-500 dark:text-zinc-400 text-sm'>{desc}</p>
+        <h3 className="font-semibold text-sm text-zinc-900 dark:text-zinc-50">{label}</h3>
+        <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-0.5">{desc}</p>
       </div>
     </div>
   );
