@@ -36,11 +36,11 @@ export const Navbar = ({ navOpen }) => {
   };
 
   const navItems = [
-    { label: "Home", link: "#home", className: "nav-link" },
-    { label: "About", link: "#about", className: "nav-link" },
-    { label: "Work", link: "#work", className: "nav-link" },
-    { label: "CV", link: "#cv", className: "nav-link" },
-    { label: "Contact", link: "#contact", className: "nav-link md:hidden" },
+    { label: "Accueil",  link: "#home",    className: "nav-link" },
+    { label: "À propos", link: "#about",   className: "nav-link" },
+    { label: "Projets",  link: "#work",    className: "nav-link" },
+    { label: "CV",       link: "#cv",      className: "nav-link" },
+    { label: "Contact",  link: "#contact", className: "nav-link md:hidden" },
   ];
 
   return (
